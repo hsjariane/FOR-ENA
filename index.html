@@ -15,18 +15,18 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Video background optimized for mobile */
+        /* Keep the video as background exactly as is */
         #bgVideo {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;  /* full viewport width */
-            height: 100vh; /* full viewport height */
-            object-fit: cover; /* scale video to cover screen */
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
             z-index: -2;
         }
 
-        /* Floating hearts animation */
+        /* Floating hearts animation on top */
         .heart {
             position: absolute;
             font-size: 20px;
@@ -42,7 +42,7 @@
             100% { transform: translateY(-20vh) rotate(360deg) scale(1.3); opacity: 0; }
         }
 
-        /* Centered card */
+        /* Centered card with pulse animation */
         .centered {
             position: absolute;
             top: 50%;
@@ -90,7 +90,7 @@
             text-shadow: 0 0 5px #a855f7;
         }
 
-        /* Click button */
+        /* Click button with bounce animation */
         .btn {
             padding: 16px;
             width: 100%;
@@ -120,33 +120,18 @@
             0%, 100% { transform: translateY(0);}
             50% { transform: translateY(-8px);}
         }
-
-        /* Optional: reduce heart size for small screens */
-        @media screen and (max-width: 400px) {
-            .heart {
-                font-size: 16px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            p, .btn {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- Video Background -->
+    <!-- Video Background stays the same -->
     <video autoplay muted loop id="bgVideo">
-        <source src="generated-videos.mp4" type="video/mp4">
+        <source src="heartbg.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
 
-    <!-- Floating hearts -->
+    <!-- Floating hearts over video -->
     <div class="heart" style="left:10%;">💖</div>
     <div class="heart" style="left:25%; animation-duration:6s;">💜</div>
     <div class="heart" style="left:40%; animation-duration:8s;">💗</div>
@@ -169,4 +154,3 @@
 
 </body>
 </html>
-
