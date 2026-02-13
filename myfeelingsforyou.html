@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Feelings For You 💖</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9a8d4, #c084fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7;
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .message-container {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(12px);
+            border: 3px solid #ec4899;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 380px;
+            height: 450px; /* fixed height for scroll */
+            overflow-y: auto;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease forwards;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollbar styling for mobile */
+        .message-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .message-container::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 3px;
+        }
+
+        .message-container::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        /* Back button styling */
+        .back-btn {
+            padding: 16px;
+            width: 100%;
+            max-width: 380px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        .back-btn:active {
+            transform: scale(0.97);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-6px);}
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>💖 My Feelings For You 💖</h1>
+
+    <div class="message-container">
+        <p>
+        I know I don’t always say this, but I still love you, Ena. And honestly, I think that feeling keeps growing every single day. Sometimes I don’t know how to explain what I truly feel. It’s like my heart understands it, but my words can’t fully describe it. But even if I can’t perfectly say everything, I still want to try — because you deserve to hear it.
+        <br><br>
+        Please don’t ever feel guilty about the things I do for you. Everything I give, everything I say, everything I do — I do it because I want to. Not because I expect something in return. I don’t want you to feel like you owe me anything. Wala akong hinihinging kapalit. I just want you to enjoy being with me. I want you to feel safe, relaxed, and at peace when you’re with me. If I can give you even a little rest from your stress and problems, that’s already enough for me.
+        <br><br>
+        I love seeing you smile. Your smile makes my day brighter. But I also understand that life isn’t always happy. We both have our own struggles, our own problems, our own heavy days. And I don’t expect you to be strong all the time. I just want you to know that when you’re tired, when you’re sad, when everything feels too much — I want to be there. I want to be someone you can lean on. Not just during happy moments, but especially during the hardest ones.
+        <br><br>
+        Whenever I see you, my heart feels so full. I feel warm and calm when you’re around. It’s like my world slows down in the best way. Your presence alone already makes me happy. And I truly appreciate all the sacrifices and effort you’ve given me. I see it. I notice it. And I’m so thankful for every little thing you do, even the small ones you think don’t matter. They matter to me.
+        <br><br>
+        Thank you for choosing me. Thank you for staying. Thank you for being you.
+        <br><br>
+        I love you more than I can fully explain, but I hope you can feel it in the way I treat you, in the way I care for you, and in the way I choose you every single day. 💗
+        </p>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">⬅️ Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+
+</body>
+</html>
