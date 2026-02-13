@@ -15,21 +15,21 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Video Background - fully mobile responsive */
+        /* Video background optimized for mobile */
         #bgVideo {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* fills screen, maintains aspect ratio */
+            width: 100vw;  /* full viewport width */
+            height: 100vh; /* full viewport height */
+            object-fit: cover; /* scale video to cover screen */
             z-index: -2;
         }
 
-        /* Floating hearts */
+        /* Floating hearts animation */
         .heart {
             position: absolute;
-            font-size: 5vw; /* scales with screen width */
+            font-size: 20px;
             color: #ffb6c1;
             animation: float 7s linear infinite;
             opacity: 0.8;
@@ -50,11 +50,11 @@
             transform: translate(-50%, -50%);
             text-align: center;
             width: 90%;
-            max-width: 320px; /* mobile-friendly width */
-            padding: 20px;
+            max-width: 350px;
+            padding: 25px;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(12px);
-            border-radius: 15px;
+            border-radius: 20px;
             animation: fadeInScale 1.5s ease forwards, pulse 3s infinite;
         }
 
@@ -63,11 +63,11 @@
             50% { transform: translate(-50%, -50%) scale(1.03); }
         }
 
-        /* Heading */
+        /* Heading with glow + float animation */
         h1 {
             color: #fff;
-            font-size: 6vw; /* scales with screen width */
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
             text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7;
             animation: floatText 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
         }
@@ -85,16 +85,16 @@
 
         p {
             color: #fff;
-            font-size: 4.5vw; /* scales with screen width */
-            margin-bottom: 20px;
+            font-size: 16px;
+            margin-bottom: 25px;
             text-shadow: 0 0 5px #a855f7;
         }
 
-        /* Button */
+        /* Click button */
         .btn {
-            padding: 12px;
+            padding: 16px;
             width: 100%;
-            font-size: 4.5vw; /* scales with screen width */
+            font-size: 16px;
             border: none;
             border-radius: 25px;
             background: linear-gradient(90deg, #a855f7, #ec4899);
@@ -118,21 +118,31 @@
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0);}
-            50% { transform: translateY(-6px);}
+            50% { transform: translateY(-8px);}
         }
 
-        /* Mobile adjustments for tiny screens */
-        @media (max-width: 400px) {
-            .heart { font-size: 7vw; }
-            .centered { padding: 15px; max-width: 280px; }
+        /* Optional: reduce heart size for small screens */
+        @media screen and (max-width: 400px) {
+            .heart {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p, .btn {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Video Background -->
     <video autoplay muted loop id="bgVideo">
-        <source src="heartbg.mp4" type="video/mp4">
+        <source src="generated-videos.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
 
@@ -156,7 +166,7 @@
             window.location.href = "surprise.html";
         }
     </script>
+
 </body>
 </html>
-
 
